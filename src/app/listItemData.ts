@@ -1,4 +1,4 @@
-export default interface data {
+export default interface listItemDataTemplate {
     track: string,
     singer: string,
     album: string
