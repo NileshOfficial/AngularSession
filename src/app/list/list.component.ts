@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import listItemDataTemplate from '../listItemData';
-import { mapToMapExpression } from '@angular/compiler/src/render3/util';
+
 
 let tempData:Array<listItemDataTemplate>  = [
   {
@@ -42,20 +42,23 @@ export class ListComponent {
   // currentSelected: number = 0;
   
   listItemCount = 0;
+  listItemKey = 0;
 
   listData = new Map<number, listItemDataTemplate>();
   
   
   constructor() {
     tempData.forEach(item => {
-      item.idx = this.listItemCount ++;
+      item.idx = this.listItemKey ++;
       this.listData.set(item.idx, item);
+      this.listItemCount ++;
     });  
   }
 
   remove = (idx: number) => {
     console.log(idx);
     this.listData.delete(idx);
+    this.listItemCount --;
   }
 
   // setCurrentSelected = (idx: number) => {
@@ -63,7 +66,8 @@ export class ListComponent {
   // }
 
   addItemEventHandler = (event: listItemDataTemplate) => {
-    event.idx = this.listItemCount ++;
+    event.idx = this.listItemKey ++;
     this.listData.set(event.idx, event);
+    this.listItemCount ++;
   }
 }

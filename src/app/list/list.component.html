@@ -1,6 +1,7 @@
 <ng-container>
     <h1>{{listTitle}}</h1>
     <app-input-field (addListItemEvent)="addItemEventHandler($event)"></app-input-field>
+    <app-counter [counter]="listItemCount"></app-counter>
 </ng-container>
 
 <ul class="listContainer">
