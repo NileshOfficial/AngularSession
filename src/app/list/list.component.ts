@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-
-interface listDataItem {
-  track: string,
-  singer: string,
-  album: string
-}
-
+import data from '../listItemData';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -15,12 +9,12 @@ interface listDataItem {
 export class ListComponent {
 
   listTitle: string;
-  listData: Array<listDataItem>;
+  listData: Array<data>;
   currentSelected: number = 0;
   
   constructor() { }
 
-  addItem = (item: listDataItem) => {
+  addItem = (item: data) => {
     this.listData.push(item);
   }
 
