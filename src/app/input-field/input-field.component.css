@@ -1,0 +1,27 @@
+.input {
+    border: none;
+    border: 1px solid #777;
+    color: #777;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.input:focus {
+    border: 1px solid #0077ff;
+
+}
+
+.btnCircle {
+    background: #0077ff;
+    font-size: 18px;
+    font-weight: 600;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}

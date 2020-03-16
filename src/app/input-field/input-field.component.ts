@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-input-field',
   templateUrl: './input-field.component.html',
   styleUrls: ['./input-field.component.css']
 })
-export class InputFieldComponent implements OnInit {
+export class InputFieldComponent {
 
+  inputVal: string;
   constructor() { }
 
-  ngOnInit(): void {
+  updateInput = event => {
+    this.inputVal = event.target.value;
   }
 
+  onclick = event => {
+    // something
+  }
 }
