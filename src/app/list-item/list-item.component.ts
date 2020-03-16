@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import data from '../listItemData';
+
 
 @Component({
   selector: 'app-list-item',
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.css']
 })
-export class ListItemComponent implements OnInit {
 
+export class ListItemComponent {
+
+  @Input('itemData') data: data;
+
+  @Output('selected') selected: boolean;
+  
   constructor() { }
 
-  ngOnInit(): void {
+  setSelected = _ => {
+    this.selected = true;
   }
 
 }
