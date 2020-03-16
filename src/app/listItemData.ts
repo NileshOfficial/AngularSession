@@ -1,5 +1,6 @@
 export default interface listItemDataTemplate {
     track: string,
     singer: string,
-    album: string
+    album: string,
+    idx?: number
 }
