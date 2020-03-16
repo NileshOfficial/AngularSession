@@ -25,8 +25,8 @@ export class InputFieldComponent {
       track: this.track,
       singer: this.singer,
       album: this.album
-    }
-    this.addListItemEvent.emit(eventData)
+    };
+    this.addListItemEvent.emit(eventData);
   }
 
   decideToDisable = () => {
