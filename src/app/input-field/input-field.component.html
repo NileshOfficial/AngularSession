@@ -1,2 +1,7 @@
-<input class="input" type="text" (input)="updateInput($event)">
-<button class="btnCircle" >+</button>
+<h2 class="heading">Add New Song</h2>
+
+<input class="input" type="text" placeholder="Track Name" [(ngModel)]="track" (input)="decideToDisable()">
+<input class="input" type="text" placeholder="Singer Name" [(ngModel)]="singer" (input)="decideToDisable()">
+<input class="input" type="text" placeholder="Album Name" [(ngModel)]="album" (input)="decideToDisable()">
+
+<button class="btnCircle" [disabled]="disableAdd" (click)="emitAddListItemEvent()">+</button>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import listItemDataTemplate from '../listItemData';
+
 
 @Component({
   selector: 'app-input-field',
@@ -7,14 +9,29 @@ import { Component } from '@angular/core';
 })
 export class InputFieldComponent {
 
-  inputVal: string;
+  track: string;
+  singer: string;
+  album: string;
+
+  disableAdd:boolean = true;
+
+  @Output() addListItemEvent = new EventEmitter<listItemDataTemplate>()
+
   constructor() { }
 
-  updateInput = event => {
-    this.inputVal = event.target.value;
+  emitAddListItemEvent = () => {
+    console.log("happened");
+    let eventData: listItemDataTemplate = {
+      track: this.track,
+      singer: this.singer,
+      album: this.album
+    }
+    this.addListItemEvent.emit(eventData)
   }
 
-  onclick = event => {
-    // something
+  decideToDisable = () => {
+    this.disableAdd = (this.track && this.singer && this.album)
+              ? false
+              : true;
   }
 }
