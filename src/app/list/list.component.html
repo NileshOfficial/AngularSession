@@ -1,6 +1,6 @@
 <ng-container>
     <h1>{{listTitle}}</h1>
-    <app-input-field></app-input-field>
+    <app-input-field (addListItemEvent)="addItemEventHandler($event)"></app-input-field>
 </ng-container>
 
 <ul class="listContainer">
@@ -10,11 +10,11 @@
         <span class="liHead">Album</span>
     </li>
 
-    <li *ngFor="let item of listData">
-        <span class="liCell">{{item.track}}</span>
-        <span class="liCell">{{item.singer}}</span>
-        <span class="liCell">{{item.album}}</span>
-        <a href="#" class="btnCircle">
+    <li *ngFor="let item of listData.entries()">
+        <span class="liCell">{{item[1].track}}</span>
+        <span class="liCell">{{item[1].singer}}</span>
+        <span class="liCell">{{item[1].album}}</span>
+        <a href="#" class="btnCircle" (click)="remove(item[1].idx)">
             <i class="far fa-trash-alt"></i>
         </a>
     </li>

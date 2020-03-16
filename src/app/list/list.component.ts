@@ -1,5 +1,34 @@
 import { Component } from '@angular/core';
-import data from '../listItemData';
+import listItemDataTemplate from '../listItemData';
+import { mapToMapExpression } from '@angular/compiler/src/render3/util';
+
+let tempData:Array<listItemDataTemplate>  = [
+  {
+    track: "Calma",
+    singer: "Pedro Capo",
+    album: "Calma"
+  },
+  {
+    track: "God's Plan",
+    singer: "Drake",
+    album: "Scorpion"
+  },
+  {
+    track: "Hall of Fame",
+    singer: "The Script, will.i.am",
+    album: "#3 Deluxe Version"
+  },
+  {
+    track: "Godzilla",
+    singer: "Eminem, juice WRLD",
+    album: "Music to be Murdered By"
+  },
+  {
+    track: "Kamikaze",
+    singer: "Eminem",
+    album: "Kamikaze"
+  }
+];
 
 @Component({
   selector: 'app-list',
@@ -10,47 +39,31 @@ import data from '../listItemData';
 export class ListComponent {
 
   listTitle: string = "My Playlist";
-  currentSelected: number = 0;
+  // currentSelected: number = 0;
   
-  listData: Array<data> = [
-    {
-      track: "Calma",
-      singer: "Pedro Capo",
-      album: "Calma"
-    },
-    {
-      track: "God's Plan",
-      singer: "Drake",
-      album: "Scorpion"
-    },
-    {
-      track: "Hall of Fame",
-      singer: "The Script, will.i.am",
-      album: "#3 Deluxe Version"
-    },
-    {
-      track: "Godzilla",
-      singer: "Eminem, juice WRLD",
-      album: "Music to be Murdered By"
-    },
-    {
-      track: "Kamikaze",
-      singer: "Eminem",
-      album: "Kamikaze"
-    }
-  ];
-  
-  constructor() { }
+  listItemCount = 0;
 
-  addItem = (item: data) => {
-    this.listData.push(item);
+  listData = new Map<number, listItemDataTemplate>();
+  
+  
+  constructor() {
+    tempData.forEach(item => {
+      item.idx = this.listItemCount ++;
+      this.listData.set(item.idx, item);
+    });  
   }
 
   remove = (idx: number) => {
-    this.listData.splice(idx, 1);
+    console.log(idx);
+    this.listData.delete(idx);
   }
 
-  setCurrentSelected = (idx: number) => {
-    this.currentSelected = idx;
+  // setCurrentSelected = (idx: number) => {
+  //   this.currentSelected = idx;
+  // }
+
+  addItemEventHandler = (event: listItemDataTemplate) => {
+    event.idx = this.listItemCount ++;
+    this.listData.set(event.idx, event);
   }
 }
