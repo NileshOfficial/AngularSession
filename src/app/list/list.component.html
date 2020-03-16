@@ -1,4 +1,21 @@
-<ul class="listContainer">
+<ng-container>
     <h1>{{listTitle}}</h1>
-    <span>Current Selected Album {{listData[currentSelected].album}}</span>
+    <app-input-field></app-input-field>
+</ng-container>
+
+<ul class="listContainer">
+    <li>
+        <span class="liHead">Track</span>
+        <span class="liHead">Singer</span>
+        <span class="liHead">Album</span>
+    </li>
+
+    <li *ngFor="let item of listData">
+        <span class="liCell">{{item.track}}</span>
+        <span class="liCell">{{item.singer}}</span>
+        <span class="liCell">{{item.album}}</span>
+        <a href="#" class="btnCircle">
+            <i class="far fa-trash-alt"></i>
+        </a>
+    </li>
 </ul>

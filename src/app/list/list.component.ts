@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import data from '../listItemData';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -8,9 +9,36 @@ import data from '../listItemData';
 
 export class ListComponent {
 
-  listTitle: string;
-  listData: Array<data>;
+  listTitle: string = "My Playlist";
   currentSelected: number = 0;
+  
+  listData: Array<data> = [
+    {
+      track: "Calma",
+      singer: "Pedro Capo",
+      album: "Calma"
+    },
+    {
+      track: "God's Plan",
+      singer: "Drake",
+      album: "Scorpion"
+    },
+    {
+      track: "Hall of Fame",
+      singer: "The Script, will.i.am",
+      album: "#3 Deluxe Version"
+    },
+    {
+      track: "Godzilla",
+      singer: "Eminem, juice WRLD",
+      album: "Music to be Murdered By"
+    },
+    {
+      track: "Kamikaze",
+      singer: "Eminem",
+      album: "Kamikaze"
+    }
+  ];
   
   constructor() { }
 
