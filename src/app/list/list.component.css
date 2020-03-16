@@ -1,0 +1,8 @@
+.listContainer {
+    border: 1px solid #888;
+    border-radius: 10px;
+}
+
+.listContainer > :nth-child(even) {
+    background-color: #ccc;
+}
