@@ -1,7 +1,7 @@
 import { Directive, OnInit, ElementRef } from '@angular/core';
 
 @Directive({
-    selector: "app-inner-text-mod"
+    selector: "[app-inner-text-mod]"
 })
 export class InnerTextModDirective implements OnInit {
     
