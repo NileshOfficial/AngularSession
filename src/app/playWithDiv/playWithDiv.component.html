@@ -1,0 +1,17 @@
+<button class="btn" (click)="showDiv(true)" [disabled]="divShown">
+    Show Me!
+</button>
+<button class="btn" (click)="showDiv(false)" [disabled]="!divShown">
+    Hide Me!
+</button>
+
+<div class="funnyDiv" *ngIf="divShown" [ngClass]="getDivColor()">
+
+</div>
+
+<button class="btn green" *ngIf="divShown" [disabled]="getDivColor() === 'green'" (click)="changeColor('green')">
+    Go green
+</button>
+<button class="btn red" *ngIf="divShown" [disabled]="getDivColor() === 'red'" (click)="changeColor('red')">
+    Red Riding Hood
+</button>
