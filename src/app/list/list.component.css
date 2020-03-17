@@ -1,0 +1,35 @@
+.listContainer {
+    border: 1px solid #888;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.listContainer > :nth-child(even) {
+    background-color: #ccc;
+}
+
+.listContainer > li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom:10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.liHead {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 210px;
+    font-weight: 600;
+}
+
+.liCell {
+    display: inline-block;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 210px;
+}

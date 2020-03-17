@@ -1,0 +1,14 @@
+<h2>{{listHeading}}</h2>
+
+<ul class="listContainer">
+    <li>
+        <span class="liHead">Track</span>
+        <span class="liHead">Artist</span>
+        <span class="liHead">Album</span>
+    </li>
+    <li *ngFor="let track of albums">
+        <span class="liCell">{{track.track}}</span>
+        <span class="liCell">{{track.singer}}</span>
+        <span class="liCell">{{track.album}}</span>
+    </li>
+</ul>
