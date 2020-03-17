@@ -1,0 +1,28 @@
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #1976d2;
+    cursor: pointer;
+}
+
+.input {
+    border: 1px solid #777;
+    color: #444;
+    padding: 10px 20px;
+    margin: 5px 10px;
+    transition: ease-in-out 0.3s;
+}
+
+.input:focus {
+    box-shadow: 0 0 5px #1976d2;
+}
+
+.status {
+    display: inline-block;
+    width: 100%;
+}

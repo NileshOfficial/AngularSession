@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ["./inputField.component.css"]
 })
 export class InputFieldComponent {
-    
+    inputVal: string = "Chill";
+
+    backToDefault = () => {
+        this.inputVal = "Chill";
+    }
 }
