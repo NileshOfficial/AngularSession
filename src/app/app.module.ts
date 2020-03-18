@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LifecycleDemoComponent } from './lifecycleDemo/lifecycleDemo.component';
+import { OnChangesComponent } from './onChangesDemo/onChanges.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LifecycleDemoComponent
+    LifecycleDemoComponent,
+    OnChangesComponent
   ],
   imports: [
     BrowserModule,
