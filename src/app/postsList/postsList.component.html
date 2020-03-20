@@ -1,0 +1,13 @@
+<ul class="list">
+    <li>
+        <span>Name</span>
+        <span>Email</span>
+        <span>Content</span>
+    </li>
+    <li *ngIf="postData.length === 0">Please Wait, fetching posts ...</li>
+    <li *ngFor="let post of postData">
+        <span>{{post.name}}</span>
+        <span>{{post.email}}</span>
+        <span>{{post.body}}</span>
+    </li>
+</ul>

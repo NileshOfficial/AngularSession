@@ -1,0 +1,22 @@
+.list {
+    margin: 10px 20px;
+    border: 1px solid #777;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.list > li {
+    margin: 5px 10px;
+    border-radius: 2px;
+    color: #333;
+}
+
+.list > li:nth-child(even) {
+    background-color: #aaa;
+}
+
+.list > li > span {
+    display: inline-block;
+    width: calc(100% / 3);
+    text-align: center;
+}
