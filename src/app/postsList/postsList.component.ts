@@ -17,7 +17,6 @@ export class PostsListComponent implements OnInit {
         this.apiInterface.getPosts().
         subscribe((posts: Array<post>) => {
             this.postData = posts;
-            console.log(posts);
         });
     }
 }

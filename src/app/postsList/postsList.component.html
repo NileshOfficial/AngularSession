@@ -1,13 +1,9 @@
-<ul class="list">
-    <li>
-        <span>Name</span>
-        <span>Email</span>
-        <span>Content</span>
-    </li>
-    <li *ngIf="postData.length === 0">Please Wait, fetching posts ...</li>
-    <li *ngFor="let post of postData">
-        <span>{{post.name}}</span>
-        <span>{{post.email}}</span>
-        <span>{{post.body}}</span>
-    </li>
-</ul>
+<h1 class="heading">Posts</h1>
+
+<span class="waitNotice" *ngIf="postData.length === 0">Wait while I get your content ... </span>
+
+<div class="postsContainer">
+    <ng-template ngFor let-post [ngForOf]="postData">
+        <app-card [head]="post.name" [body]="post.body" [footer]="post.email"></app-card>
+    </ng-template>
+</div>

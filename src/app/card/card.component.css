@@ -1,0 +1,29 @@
+.card {
+    overflow: auto;
+    margin: 2rem;
+    border: 1px solid #999;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    max-width: 250px;
+    height: 100%;
+    overflow: auto;
+}
+
+.card:hover {
+    box-shadow: 0 0 5px #888;
+}
+
+.card .cardHeader {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #999;
+}
+
+.card .cardBody {
+    padding: 1rem 2rem;
+    /* border-bottom: 1px solid #999; */
+}
+
+.card .cardFooter {
+    padding: 1rem 2rem;
+}
