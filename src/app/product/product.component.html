@@ -1,0 +1,9 @@
+<div class="form">
+    <h2>Product Details</h2>
+    <span *ngIf="warning" class="warning">Invalid Data</span>
+    <input [(ngModel)]="id" class="input" type="text" placeholder="Product Id">
+    <input [(ngModel)]="name" class="input" type="text" placeholder="Product Name">
+    <input [(ngModel)]="count" class="input" type="number" placeholder="Quantity">
+    <textarea [(ngModel)]="description" class="input" cols="30" rows="5" placeholder="Description"></textarea>
+    <button class="btnPrimary" (click)="addProduct()">Add Product</button>
+</div>

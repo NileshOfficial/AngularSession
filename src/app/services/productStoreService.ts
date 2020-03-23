@@ -1,7 +1,7 @@
 import { product } from '../productTemplate';
 
 export class ProductStoreService {
-    products: Array<product>;
+    products: Array<product> = [];
 
     constructor() {}
 

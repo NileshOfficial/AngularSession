@@ -1,0 +1,43 @@
+.form {
+    background-color: #aeaeae;
+    color: #333;
+    padding: 3rem;
+    max-width: 400px;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+.form h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.form .input {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    width: 100%;
+}
+
+.form > * {
+    margin-top: 1rem;
+}
+
+.btnPrimary {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.warning {
+    color: #f00;
+}
