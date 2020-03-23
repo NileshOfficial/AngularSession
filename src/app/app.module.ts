@@ -5,6 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Dashboard } from './dashboard/dashboard.component';
 import { ProductComponent } from './product/product.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  {path: '', redirectTo:'dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component: Dashboard, pathMatch: 'full'},
+  {path: 'newProduct', component: ProductComponent, pathMatch: 'full'}
+];
 
 @NgModule({
   declarations: [
@@ -14,7 +21,8 @@ import { ProductComponent } from './product/product.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
