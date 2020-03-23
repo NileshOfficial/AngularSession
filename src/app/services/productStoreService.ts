@@ -8,8 +8,4 @@ export class ProductStoreService {
     addProduct(product: product): void {
         this.products.push(product);
     }
-
-    removeProduct(idx: number): void {
-        this.products.splice(idx, 0);
-    }
 }
