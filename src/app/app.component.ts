@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularSession';
+  username: string = 'nilesh kumar';
+  date: Date = new Date(15, 1, 17);
+  str: string = "reverse";
+  countable: string = "Apple is on table";
 }

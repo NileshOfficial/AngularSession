@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CapitalizePipe } from './pipes/capitalze.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { VowelCountPipe } from './pipes/vowelCount.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CapitalizePipe,
+    ReversePipe,
+    VowelCountPipe
   ],
   imports: [
     BrowserModule,
