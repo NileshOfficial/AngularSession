@@ -1,0 +1,18 @@
+.form {
+    max-width: 450px;
+    padding: 1rem;
+    border: 1px solid #777;
+    border-radius: 10px;
+}
+
+.form small {
+    color: #f00;
+}
+
+button[type="submit"] {
+    margin-top: 1rem;
+}
+
+.card {
+    max-width: 450px;
+}

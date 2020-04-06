@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-around">
+    <div class="form">
+        <h1>Template Based Form</h1>
+
+        <form (ngSubmit)="formSubmit(f)" #f="ngForm">
+            <div class="form-group">
+                <input #email="ngModel" ngModel name="email" type="email" class="form-control" placeholder="Enter email" required
+                    email>
+                <small *ngIf="!email.valid && email.touched">Email is invalid</small>
+            </div>
+            <div class="form-group">
+                <input #pass="ngModel" ngModel name="password" type="password" class="form-control" placeholder="Password"
+                    required minlength="5">
+                <small *ngIf="!pass.valid && pass.touched">Minimum password length is 5</small>
+            </div>
+            <div class="form-check">
+                <input ngModel name="gender" class="form-check-input" type="radio" id="maleRadio" value="Male" required>
+                <label class="form-check-label" for="maleRadio">
+                    Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input ngModel name="gender" class="form-check-input" type="radio" id="femaleRadio" value="Female"
+                    required>
+                <label class="form-check-label" for="femaleRadio">
+                    Female
+                </label>
+            </div>
+            <div class="form-group m-t-10">
+                <label for="City">Select City</label>
+                <select ngModel name="city" class="form-control" id="City" required>
+                    <option ngValue="Delhi">Delhi</option>
+                    <option ngValue="Mumbai">Mumbai</option>
+                    <option ngValue="Hyderabad">Hyderabad</option>
+                    <option ngValue="Pune">Pune</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                    <input ngModel name="file" type="file" class="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01" required>
+                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+        </form>
+    </div>
+
+    <div *ngIf="formData" class="card">
+        <div class="card-body">
+            <h2>Your Credentials</h2>
+            <p>Email: {{formData.email}}</p>
+            <p>Password: {{formData.password}}</p>
+            <p>Gender: {{formData.gender}}</p>
+            <p>City: {{formData.city}}</p>
+            <p>FilePath: {{formData.file}}</p>
+        </div>
+    </div>
+</div>
